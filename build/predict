@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class = 'title' >
+        <h2 > Car Price Prediction </h2>
+        <img src="/static/car.png"
+         alt="my_car" height="50px" 
+        width="130px" style="padding-bottom: 0px;" ><img/>
+    </div>
+
+    <form action="/predict" method="post" id="border" class = 'form'>
+        <div id='parent'>
+            <div>
+                <h3 > Car Model Year <i>(yyyy)</i></h3>
+                <input id="1" name="model_year" type="number" required='required'  placeholder="Type Here..."> 
+            </div>  
+    
+            <div>
+                <h3> Fuel Type </h3>
+                <select name="fuel_type" id="2" required="required">
+                    <option value="" disabled selected hidden>Please Choose...</option>
+                    <option value=5>Petrol</option>  
+                    <option value=1>Diesel</option>
+                    <option value=0>CNG</option>
+                    <option value=2>Electric</option>  
+                    <option value=3>Hybrid</option>  
+                    <option value=4>LPG</option>  
+                </select> 
+            </div>
+    
+    
+            <div>
+                <h3> Transmission Type </h3>
+                <select name="transmission" id="3" required="required">
+                    <option value="" disabled selected hidden>Please Choose...</option>
+                    <option value=0>Automatic</option>  
+                    <option value=1>Manual</option>
+                </select>
+            </div>
+    
+    
+            <div>
+                <h3> Engine / Battery Capacity<br/><i>(cc / kWh)</i> </h3>
+                <input id="4" name="engine_capacity" type="number" required='required'  placeholder="Type Here..."> 
+            </div>
+    
+    
+            <div>
+                <h3> Kilometers Driven</h3>
+                <input id="5" name="kms_driven" type="number" required='required'  placeholder="Type Here..."> 
+            </div>
+    
+    
+            <div>
+                <h3> Body Color </h3>
+                <select name="color" id="6" required="required">
+                    <option value="" disabled selected hidden>Please Choose...</option>
+                    <option value=13>White</option>  
+                    <option value=0>Black</option>
+                    <option value=1>Blue</option>
+                    <option value=5>Grey</option>  
+                    <option value=12>Silver</option>  
+                    <option value=4>Green</option>  
+                    <option value=11>Red</option>  
+                    <option value=3>Gold</option>
+                    <option value=2>Brown</option>
+                    <option value=9>Pink</option>  
+                    <option value=6>Maroon</option>  
+                    <option value=7>Metallic</option> 
+                    <option value=10>Purple</option>  
+                    <option value=8>Orange</option>  
+                    <option value=14>Yellow</option> 
+                </select> 
+            </div>
+                
+    
+            <div>
+                <h3> Assembly Type </h3>
+                <select name="assembly" id="7" required="required">
+                    <option value="" disabled selected hidden>Please Choose...</option>
+                    <option value=0>Imported</option>  
+                    <option value=1>Local</option>
+                </select> 
+            </div>
+    
+            <div>
+                <h3> Body Type </h3>
+                <select name="body_type" id="8" required="required">
+                    <option value="" disabled selected hidden>Please Choose...</option>
+                    <option value=16>Sedan</option>  
+                    <option value=6>Hatchback</option>
+                    <option value=15>SUV</option>
+                    <option value=10>Mini Van</option>  
+                    <option value=13>Pick Up</option>  
+                    <option value=4>Crossover</option>  
+                    <option value=8>MPV</option>  
+                    <option value=3>Coupe</option>
+                    <option value=1>Compact sedan</option>
+                    <option value=0>Compact SUV</option>  
+                    <option value=5>Double Cabin</option>  
+                    <option value=18>Station Wagon</option> 
+                    <option value=22>Van</option>  
+                    <option value=19>Subcompact hatchback</option>  
+                    <option value=9>Micro Van</option> 
+                    <option value=7>High Roof</option>  
+                    <option value=17>Single Cabin</option>  
+                    <option value=14>Pickup</option>  
+                    <option value=11>Mini Vehicles</option>
+                    <option value=12>Off-Road Vehicles</option>
+                    <option value=2>Convertible</option>  
+                    <option value=20>Truck</option>  
+                    <option value=21>Other</option> 
+                </select> 
+            </div>
+    
+    
+            <div>
+                <h3> Condition </h3>
+                <select name="condition" id="9" required="required">
+                    <option value="" disabled selected hidden>Please Choose...</option>
+                    <option value=0>Excellent</option>  
+                    <option value=4>Very Good</option>
+                    <option value=2>Good</option>  
+                    <option value=1>Fair</option>
+                    <option value=3>Poor</option>
+                </select> 
+            </div>
+        
+        </div>
+        <div class= 'wrapper'>
+            <button id="sub" type="submit " class = 'button'>Predict</button>
+        </div>
+        
+    </form>
+    
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: #ffdab9;
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+        }
+        .title {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            margin: 0px;
+            text-align: justify;
+            display: block;
+            margin-top: 0px;
+        }
+
+        .title > h2, 
+        .title > img {
+            display: inline-block;
+            align-items: center;
+            justify-items: center;
+            vertical-align: middle;
+        }
+
+        .form {
+            margin: 0px;
+            padding-top: 10px;
+            align-content: center;
+            align-items: center;
+            padding-bottom: 0px;
+        }
+
+        #parent div {
+            display: inline-block;
+            padding: 50px 90px;
+            align-items: center;
+            align-content: center;
+            width: 10%;   
+        }
+
+        #sub {
+            position: relative;
+            background-color: #282828;
+            border: none;
+            font-size: 20px;
+            color: white;
+            padding: 8px;
+            width: 100px;
+            text-align: center;
+ 
+            overflow: hidden;
+            cursor: pointer;
+            }
+
+        .wrapper {
+            text-align: center;
+
+            }
+
+        .button {
+            position: absolute;
+            padding-top: 0px;
+            margin-top: 0px;
+
+
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            
+        }
+
+        @media only screen and (min-width: 600px) {
+            /* For tablets: */
+            .col-s-1 {width: 8.33%;}
+            .col-s-2 {width: 16.66%;}
+            .col-s-3 {width: 25%;}
+            .col-s-4 {width: 33.33%;}
+            .col-s-5 {width: 41.66%;}
+            .col-s-6 {width: 50%;}
+            .col-s-7 {width: 58.33%;}
+            .col-s-8 {width: 66.66%;}
+            .col-s-9 {width: 75%;}
+            .col-s-10 {width: 83.33%;}
+            .col-s-11 {width: 91.66%;}
+            .col-s-12 {width: 100%;}
+            }
+        @media only screen and (min-width: 768px) {
+            /* For desktop: */
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+            }
+
+    </style>
+
+
+
+</body>
+</html>

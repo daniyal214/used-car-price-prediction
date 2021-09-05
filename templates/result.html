@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div class = 'title' >
+        <h2 > Car Price Predictor </h2>
+        <img src="{{url_for('static', filename='car.png')}}" 
+        alt="my_car" height="50px" width="130px" style="padding-bottom: 0px;" ><img/>
+    </div>
+    
+    
+    <form action="{{ url_for('refresh')}}" method = 'post' class='form'>
+        <h3 id='pred'>{{ prediction_text }}<h3>
+        <div class = 'wrapper'>
+            <button id="sub" type="submit " class='button' >Return to Home Page</button>
+        </div>
+    </form>
+
+
+
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: #ffdab9;
+            font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+        }
+        .title {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            margin: 0px;
+            text-align: justify;
+            display: block;
+            margin-top: 0px;
+        }
+
+        .title > h2, 
+        .title > img {
+            display: inline-block;
+            align-items: center;
+            justify-items: center;
+            vertical-align: middle;
+        }
+
+        .form {
+            margin: 0px;
+            padding-top: 100px;
+            align-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 50px;
+        }
+
+        #sub {
+            position: relative;
+            background-color: #282828;
+            border: none;
+            font-size: 20px;
+            color: white;
+            padding: 8px;
+            width: 240px;
+            text-align: center;
+    
+            overflow: hidden;
+            cursor: pointer;
+            }
+
+        .wrapper {
+            text-align: center;
+            padding-bottom: 30px;
+            }
+
+        .button {
+            position: absolute;
+            top: 50%;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;    
+        }
+
+        @media only screen and (min-width: 600px) {
+            /* For tablets: */
+            .col-s-1 {width: 8.33%;}
+            .col-s-2 {width: 16.66%;}
+            .col-s-3 {width: 25%;}
+            .col-s-4 {width: 33.33%;}
+            .col-s-5 {width: 41.66%;}
+            .col-s-6 {width: 50%;}
+            .col-s-7 {width: 58.33%;}
+            .col-s-8 {width: 66.66%;}
+            .col-s-9 {width: 75%;}
+            .col-s-10 {width: 83.33%;}
+            .col-s-11 {width: 91.66%;}
+            .col-s-12 {width: 100%;}
+            }
+        @media only screen and (min-width: 768px) {
+            /* For desktop: */
+            .col-1 {width: 8.33%;}
+            .col-2 {width: 16.66%;}
+            .col-3 {width: 25%;}
+            .col-4 {width: 33.33%;}
+            .col-5 {width: 41.66%;}
+            .col-6 {width: 50%;}
+            .col-7 {width: 58.33%;}
+            .col-8 {width: 66.66%;}
+            .col-9 {width: 75%;}
+            .col-10 {width: 83.33%;}
+            .col-11 {width: 91.66%;}
+            .col-12 {width: 100%;}
+            }
+    </style>
+</body>
+</html>
