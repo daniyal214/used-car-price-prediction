@@ -21,7 +21,6 @@ joblib
 jsonify
 MarkupSafe
 sklearn
-threadpoolctl
 urllib3
 Werkzeug
 wincertstore
