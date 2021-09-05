@@ -17,10 +17,10 @@ Flask>=1.1.2
 idna>=2.10
 itsdangerous>=1.1.0
 Jinja2>=2.11.2
-joblib>=0.15.1
-jsonify>=0.5
-MarkupSafe>=1.1.1
-sklearn>=0.0
+joblib
+jsonify
+MarkupSafe
+sklearn
 threadpoolctl
 urllib3
 Werkzeug
